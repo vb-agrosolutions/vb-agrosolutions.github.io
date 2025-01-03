@@ -20,10 +20,15 @@
             --primary-text-color: #313b46;
           }
 
+          html {
+            min-width: 320px;
+          }
+
           body {
               font-family: Arial, sans-serif;
               background-color: var(--bg-color);
               color: var(--primary-text-color);
+              min-width: 340px;
           }
 
           .header {
@@ -45,6 +50,10 @@
 
           h2 {
             font-size: 24px;
+          }
+
+          .section-title {
+            text-align: center;
           }
 
           .card {
@@ -73,6 +82,22 @@
             text-align: center;
             padding: 10px 0;
           }
+
+          @media only screen and (max-width: 780px) {
+            .entity-name {
+              font-size: 20px;
+            }
+
+            .section-title {
+              text-align: left;
+            }
+          }
+
+          @media only screen and (max-width: 480px) {
+            .entity-name {
+              font-size: 16px;
+            }
+          }
       </style>
   </head>
   <body>
@@ -87,7 +112,7 @@
       <div class="container mt-5">
           <!-- Entity details -->
           <section id="entity">
-              <h2 class="text-center mb-4"><i class="fa-solid fa-building"></i> Στοιχεία εταιρίας</h2>
+              <h2 class="section-title mb-4"><i class="fa-solid fa-building"></i> Στοιχεία εταιρίας</h2>
               <div class="row">
                   <div class="col-md-6">
                       <div class="card p-3">
@@ -126,7 +151,7 @@
 
           <!-- Partners -->
           <section id="partners">
-              <h2 class="text-center mb-4"><i class="fa-solid fa-users"></i> Στοιχεία εταίρων</h2>
+              <h2 class="section-title mb-4"><i class="fa-solid fa-users"></i> Στοιχεία εταίρων</h2>
               <div class="col-md-6">
                 <div class="card p-3">
                     <ul>
